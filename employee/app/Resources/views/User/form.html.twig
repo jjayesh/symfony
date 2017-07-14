@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h3>{{ label }}</h3>
+<form method="post" action="">
+														<div class="row uniform">
+															<div class="6u 12u$(xsmall)">
+																<input type="text" name="form[name]" id="demo-name" value="{% if form.name is defined %} {{ form.name }} {% endif %}" placeholder="Full Name" />
+															</div>
+															<div class="6u$ 12u$(xsmall)">
+																<input type="email" name="form[email]" id="demo-email" value="{% if form.email is defined %} {{ form.email }} {% endif %}" placeholder="Email" />
+															</div>					
+															<div class="12u$">
+																<ul class="actions">
+																	<li><input type="submit" value="Save" class="special" /></li>
+																	<li><input type="reset" value="Reset" /></li>
+																</ul>
+															</div>
+														</div>
+													</form>
+{% endblock %}
