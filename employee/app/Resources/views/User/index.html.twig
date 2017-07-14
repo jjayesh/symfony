@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div>
+  <ul>
+   <div class="table-wrapper">
+														<table>
+															<thead>
+																<tr>
+																	<th>Name</th>
+																	<th>Email</th>
+																	<th>Edit</th>
+																</tr>
+															</thead>
+															<tbody>
+                              {% for client in clients %}
+																<tr>
+																	<td>{{ client.name |capitalize }}</td>
+																	<td>{{ client.email }}</td>
+																	<td><a href ="{{ path("edituser", {'id': client.id }) }}"> Edit </a></td>
+																</tr>
+                              {% endfor %}
+														</table>
+													</div>
+</ul>
+</div>
+{% endblock %}
